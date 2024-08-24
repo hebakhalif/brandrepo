@@ -15,15 +15,16 @@ class SliderProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 250.0,
-        autoPlay: true,
-        autoPlayInterval: const Duration(seconds: 3),
-        autoPlayCurve: Curves.fastOutSlowIn,
+        height: 140, //كانت 250
+        
+        autoPlay: true,// فعلتها عشان تتحرك
+        autoPlayInterval: const Duration(seconds: 2),// عدد الصور المتحركه 
+        autoPlayCurve: Curves.fastOutSlowIn, // 
       ),
       items: [
-        'assets/images/photo_2024-08-16_23-29-26.jpg',
-        'assets/images/photo_2024-08-16_23-29-26.jpg',
-        'assets/images/photo_2024-08-16_23-29-26.jpg',
+       // 'assets/images/photo_2024-08-16_23-29-26.jpg',
+        'assets/images/photo_2024-08-21_18-28-20.jpg',
+        'assets/images/photo_2024-08-21_01-08-14.jpg',
       ].map((i) {
         return Builder(
           builder: (BuildContext context) {

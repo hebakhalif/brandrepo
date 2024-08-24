@@ -1,7 +1,8 @@
 import 'package:brandy_flutter1/core/components/custom_divider.dart';
+import 'package:brandy_flutter1/features/home/ui/screens/product_screen.dart';
+import 'package:brandy_flutter1/features/home/ui/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../config/colors/app_colors.dart';
 import '../../../../views/Productsscroll.dart';
 import '../../data/models/circle_product_model.dart';
@@ -13,9 +14,24 @@ import '../widgets/slider_products.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
+
+
+
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
+
+  final List<Product> products = const [
+   // Product('جاكيت نسائي طويل سادة',
+     //'نشتي',
+     // 259.00,
+    // imageUrl: 'assets/images/photo_2024-08-16_22-50-16.jpg'
+     // ),
+   // Product('جاكيت طويل بأكمام طويلة', 'نشتي',
+   //  269.00, 'assets/image2.jpg'
+    // ),
+    // أضف المزيد من المنتجات هنا
+  ];
 
 class _HomeScreenState extends State<HomeScreen> {
   List<String> categories = [
@@ -24,21 +40,24 @@ class _HomeScreenState extends State<HomeScreen> {
     'الرجال',
     'الأطفال',
     'الأحذية',
-    'الإلكترونيات',
-    'المنزل',
-    'الأثاث',
+    
+   // 'الإلكترونيات',
+    //'المنزل',
+   // 'الأثاث',
   ];
   int _current = 0;
+  
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
+
       child: Column(
         children: [
           SizedBox(
             height: 50,
             child: ListView.separated(
-              separatorBuilder: (context, index) => const SizedBox(width: 15),
+              separatorBuilder: (context, index) => const SizedBox(width: 30),
               scrollDirection: Axis.horizontal,
               itemCount: categories.length,
               itemBuilder: (context, index) {
@@ -51,6 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Column(
                     children: [
                       Text(
+                      
                         categories[index],
                         style: TextStyle(
                           color: _current == index
@@ -62,19 +82,78 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(
                         height: 5,
                       ),
-                      _current == index ? myDivider(50, 2) : Container(),
-                    ],
+                      _current == index ? myDivider(70, 4) : Container(),
+                    ],    
                   ),
                 );
+                
               },
             ),
           ),
           ListOfCircleProduct(),
           SizedBox(height: 15),
           SliderProducts(),
-          SizedBox(height: 10),
+          SizedBox(height: 20),
+          
+          Padding(
+            padding: const EdgeInsets.only(left:10),
+            child: Text("تسوق حسب المتجر  ",
+             style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              ),),
+          ),
+             SizedBox(height: 20,),
+      
+               SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                 child: Row(children: [
+                   categor(width: 170, imagem: "assets/images/photo_2024-08-21_23-30-45.jpg", heightm: 40),
+                    categor(width: 170, imagem: "assets/images/photo_2024-08-21_23-43-54.jpg", heightm: 40),
+                     categor(width: 170, imagem: "assets/images/photo_2024-08-21_23-47-35.jpg", heightm: 40),
+                 ],),
+               ) ,
+               SizedBox(height: 20,),
+               Text("                              cLow REClPE  أحدث تشكيلة من ",
+               style: TextStyle(fontSize: 20,
+               fontWeight: FontWeight.bold,
+      
+               ),
+               ),   
         ],
       ),
     );
   }
 }
+///////////////////
+class categor extends StatelessWidget {
+  const categor({super.key,
+   required this.width,
+    required this.imagem,
+     required this.heightm
+     });
+    final  double heightm;
+   final  double width;
+   final String imagem;
+  // final String onTapp;
+  @override
+  Widget  build(BuildContext context) {
+    return  Row(
+    children: [
+       GestureDetector(          
+             child: Image.asset(imagem,
+             height:heightm ,
+               width: width,),    
+              onTap: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context){
+                  return ProfileScreen();
+                })
+                );
+              },
+            ),
+    ],
+    );
+  }
+}
+

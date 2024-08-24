@@ -8,18 +8,24 @@ class ProductScrollItem extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return CircleAvatar(
-      radius: 45,
-      backgroundColor: AppColors.kPrimaryColor,
-      child: CircleAvatar(
-        backgroundColor: AppColors.kWhiteColor,
-        radius: 43,
-        child: Image.asset(
-          image,
-          height: 90,
-          fit: BoxFit.contain,
+
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: 45,
+          backgroundColor: AppColors.kPrimaryColor,
+          child: CircleAvatar(
+            backgroundColor: AppColors.kWhiteColor,
+            radius: 43,
+            child: Image.asset(
+              image,
+              height: 90,
+              fit: BoxFit.contain,
+            ),
+          ),
         ),
-      ),
+        Text(text),
+      ],
     );
   }
 }

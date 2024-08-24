@@ -1,6 +1,7 @@
 import 'package:brandy_flutter1/config/colors/app_colors.dart';
 import 'package:brandy_flutter1/features/home/ui/screens/home_screen.dart';
 import 'package:brandy_flutter1/features/layout/ui/widgets/logo_with_line.dart';
+import 'package:brandy_flutter1/views/ProfileScreen.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -26,15 +27,21 @@ class _LayoutScreenState extends State<LayoutScreen> {
     setState(() {
       _selectedIndex = index;
     });
-  }
-
+  } 
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+          // Navigator.push(context, MaterialPageRoute(builder:(context)
+          // {
+           // return ProfileScreen();
+          // }
+          // ));
+          },
           icon: const Icon(
             Iconsax.search_normal_outline,
             color: Colors.black,
@@ -96,6 +103,7 @@ class _LayoutScreenState extends State<LayoutScreen> {
               ),
             ),
             CustomNavigationBarItem(
+              
               icon: const Icon(Icons.settings),
               title: Text(
                 "Settings",
