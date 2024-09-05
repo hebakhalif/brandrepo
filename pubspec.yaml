@@ -137,6 +137,7 @@ dependencies:
   hadith: ^1.0.0
   date_picker_timeline: ^1.2.6
   carousel_slider_plus: ^7.0.0
+  pin_code_fields: ^8.0.1
   
 
 dev_dependencies:
