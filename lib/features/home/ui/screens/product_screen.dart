@@ -96,31 +96,29 @@ class ShoeCard extends StatelessWidget {
 class ProductList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-     // height: 200, // ارتفاع المساحة المخصصة للمنتجات
-        return  Expanded(
-          child: GridView.builder(
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
-          //scrollDirection: Axis.horizontal,
-           // التمرير أفقي
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 1, // عدد الصفوف في الشبكة
-            childAspectRatio: 0.8, // النسبة بين العرض والارتفاع لكل عنصر
-            mainAxisSpacing: 10, // المسافة بين الأعمدة
-          ),
-          itemCount: 5, // عدد المنتجات المعروضة
-          itemBuilder: (context, index) {
-            return ProductCard(
-              imageUrl: 'assets/images/photo_2024-09-13_13-43-03.jpg',
-              title: 'Product $index',
-              price: 300.0 + index * 100,
-              isFavorite: index % 2 == 0,
-            );
-           
-          },
-                ),
-        );
-   
+    return Padding(
+      padding: const EdgeInsets.all(8.0), // إضافة مسافة حول الشبكة
+      child: GridView.builder(
+        shrinkWrap: true,
+        physics:
+            const NeverScrollableScrollPhysics(), // تعطيل التمرير عند الحاجة
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2, // عدد الصفوف
+          childAspectRatio: .68, // النسبة بين العرض والارتفاع لكل عنصر
+          mainAxisSpacing: 5, // المسافة الرأسية بين العناصر
+          crossAxisSpacing: 10, // المسافة الأفقية بين العناصر
+        ),
+        itemCount: 5, // عدد المنتجات
+        itemBuilder: (context, index) {
+          return ProductCard(
+            imageUrl: 'assets/images/photo_2024-09-13_13-43-03.jpg',
+            title: 'Product $index',
+            price: 300.0 + index * 100,
+            isFavorite: index % 2 == 0,
+          );
+        },
+      ),
+    );
   }
 }
 
@@ -130,7 +128,8 @@ class ProductCard extends StatelessWidget {
   final double price;
   final bool isFavorite;
 
-  ProductCard({
+  const ProductCard({
+    super.key,
     required this.imageUrl,
     required this.title,
     required this.price,
@@ -140,8 +139,6 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 160, // عرض البطاقة
-      margin: EdgeInsets.only(left: 16), // مسافة بين البطاقات
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -150,65 +147,76 @@ class ProductCard extends StatelessWidget {
             color: Colors.grey.withOpacity(0.3),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Align(
-              alignment: Alignment.topRight,
-              child: Icon(
-                isFavorite ? Icons.favorite : Icons.favorite_border,
-                color: isFavorite ? Colors.red : Colors.grey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: double.infinity,
+            height: 120,
+            margin: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                image: AssetImage(imageUrl),
+                fit: BoxFit.cover,
               ),
             ),
-            Center(
-              child: Image.asset(
-                imageUrl,
-                width: 150,
-                height: 100,
-              ),
+          ),
+          const SizedBox(height: 10),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'BEST SELLER',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  title,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Text(
+                      '\$$price',
+                      style: const TextStyle(fontSize: 14, color: Colors.grey),
+                    ),
+                    const Spacer(),
+                    Container(
+                      width: 45,
+                      height: 45,
+                      decoration: const BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          bottomRight: Radius.circular(20),
+                        ),
+                      ),
+                      child: const Icon(Icons.add, color: Colors.white),
+                    ),
+                  ],
+                ),
+              ],
             ),
-            SizedBox(height: 10),
-            Text(
-              'BEST SELLER',
-              style: TextStyle(
-                color: Colors.blue,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 4),
-            Text(
-              title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 4),
-            Text(
-              '\$$price',
-              style: TextStyle(fontSize: 14, color: Colors.grey),
-            ),
-            Spacer(),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: FloatingActionButton(
-                onPressed: () {},
-                child: Icon(Icons.add),
-                mini: true,
-                backgroundColor: Colors.blue,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
 }
-
 
 class Product {
   final String name;
@@ -218,8 +226,6 @@ class Product {
 
   Product(this.name, this.brand, this.imageUrl, this.price);
 }
-
-
 
 /*import 'package:flutter/material.dart';
 
