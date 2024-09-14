@@ -64,6 +64,9 @@ class LoginRegister extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
+                      shape: RoundedRectangleBorder(
+                         borderRadius: BorderRadius.circular(16),
+                      ),
                       minimumSize: const Size(400, 60)),
                   child: const Text(
                     " Login",
@@ -74,6 +77,7 @@ class LoginRegister extends StatelessWidget {
                   height: 25,
                 ),
                 ElevatedButton(
+                  
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -81,7 +85,11 @@ class LoginRegister extends StatelessWidget {
                             builder: (context) => const RegisterScreen()));
                   },
                   style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                       borderRadius: BorderRadius.circular(16),
+                    ),
                       backgroundColor: const Color.fromARGB(255, 245, 237, 237),
+                      
                       minimumSize: const Size(400, 60)),
                   child: const Text(
                     " Register",

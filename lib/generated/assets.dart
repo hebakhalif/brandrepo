@@ -38,6 +38,6 @@ class Assets {
   static const String imagesPhoto20240821234735 = 'assets/images/photo_2024-08-21_23-47-35.jpg';
   static const String imagesPhoto20240903191016 = 'assets/images/photo_2024-09-03_19-10-16.jpg';
   static const String imagesPortraitYoungJapaneseWomanWithJacket = 'assets/images/portrait-young-japanese-woman-with-jacket.jpg';
-  static const String imagesScreenshot 20240820 225903 = 'assets/images/Screenshot 2024-08-20 225903.png';
+  //static const String imagesScreenshot 20240820 225903 = 'assets/images/Screenshot 2024-08-20 225903.png';
 
 }

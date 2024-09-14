@@ -4,10 +4,10 @@ import 'package:brandy_flutter1/features/home/ui/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../../../config/colors/app_colors.dart';
-import '../../../../views/Productsscroll.dart';
-import '../../data/models/circle_product_model.dart';
+//import '../../../../views/Productsscroll.dart';
+//import '../../data/models/circle_product_model.dart';
 import '../widgets/list_of_circle_product.dart';
-import 'package:carousel_slider_plus/carousel_slider_plus.dart';
+//import 'package:carousel_slider_plus/carousel_slider_plus.dart';
 
 import '../widgets/slider_products.dart';
 
@@ -18,7 +18,7 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-final List<Product> products = const [
+final List <Product> products = const [
   // Product('جاكيت نسائي طويل سادة',
   //'نشتي',
   // 259.00,
@@ -134,7 +134,8 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 20,
             ),
-            ProductListPage(),
+            ProductList(),
+          
           ],
         ),
       ),

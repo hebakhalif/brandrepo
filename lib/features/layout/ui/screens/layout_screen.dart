@@ -1,7 +1,7 @@
 import 'package:brandy_flutter1/config/colors/app_colors.dart';
 import 'package:brandy_flutter1/features/home/ui/screens/home_screen.dart';
 import 'package:brandy_flutter1/features/layout/ui/widgets/logo_with_line.dart';
-import 'package:brandy_flutter1/views/ProfileScreen.dart';
+//import 'package:brandy_flutter1/views/ProfileScreen.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';

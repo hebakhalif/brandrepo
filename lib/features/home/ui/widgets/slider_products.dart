@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../../../../config/colors/app_colors.dart';
-import '../../../../views/Productsscroll.dart';
-import '../../data/models/circle_product_model.dart';
-import '../widgets/list_of_circle_product.dart';
+//import '../../../../views/Productsscroll.dart';
+//import '../../data/models/circle_product_model.dart';
+//import '../widgets/list_of_circle_product.dart';
 import 'package:carousel_slider_plus/carousel_slider_plus.dart';
 
 class SliderProducts extends StatelessWidget {
