@@ -17,12 +17,12 @@ class SliderProducts extends StatelessWidget {
         height: 140, //كانت 250
         
         autoPlay: true,// فعلتها عشان تتحرك
-        autoPlayInterval: const Duration(seconds: 2),// عدد الصور المتحركه 
+        autoPlayInterval: const Duration(seconds: 3),// عدد الصور المتحركه 
         autoPlayCurve: Curves.fastOutSlowIn, // 
       ),
       items: [
-       // 'assets/images/photo_2024-08-16_23-29-26.jpg',
-        'assets/images/photo_2024-08-21_18-28-20.jpg',
+        'assets/images/photo_2024-09-23_04-05-15.jpg',
+       // 'assets/images/photo_2024-08-21_18-28-20.jpg',
         'assets/images/photo_2024-08-21_01-08-14.jpg',
       ].map((i) {
         return Builder(

@@ -44,6 +44,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 180,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -114,9 +115,12 @@ class ProductCard extends StatelessWidget {
                     ),
                   ],
                 ),
+
               ],
+              
             ),
           ),
+         
         ],
       ),
     );

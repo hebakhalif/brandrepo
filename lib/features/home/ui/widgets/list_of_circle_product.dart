@@ -30,7 +30,7 @@ class ListOfCircleProduct extends StatelessWidget {
         image: 'assets/images/freepik-export-20240816203114STzA.png',
         text: 'متنوعات',
       ),
-    ];
+    ];  
     return SizedBox(
       height: 130,
       child: ListView.separated(
