@@ -4,7 +4,7 @@ class AppColors {
   static const Color kDarkPrimaryColor = Color(0xff2c3e50);
   static const Color kScaffoldLightColor = Color(0xfff2fbfb);
   static const Color klightGreen = Color(0xff00a072);
-  static const Color kPrimaryColor = Color(0xff242424);
+  static const Color kPrimaryColor = Color(0xffff6900);
   static const Color kGoldColor = Color(0xffffae00);
   static const Color kProfileCircleColor = Color(0xff86b494);
   static const Color kWhiteColor = Color(0xffffffff);

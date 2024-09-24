@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
-import '../../../../config/colors/app_colors.dart';
 //import '../../../../views/Productsscroll.dart';
 //import '../../data/models/circle_product_model.dart';
 //import '../widgets/list_of_circle_product.dart';
 import 'package:carousel_slider_plus/carousel_slider_plus.dart';
+import 'package:flutter/material.dart';
+
+import '../../../../config/colors/app_colors.dart';
 
 class SliderProducts extends StatelessWidget {
   const SliderProducts({
@@ -15,14 +16,14 @@ class SliderProducts extends StatelessWidget {
     return CarouselSlider(
       options: CarouselOptions(
         height: 140, //كانت 250
-        
-        autoPlay: true,// فعلتها عشان تتحرك
-        autoPlayInterval: const Duration(seconds: 2),// عدد الصور المتحركه 
-        autoPlayCurve: Curves.fastOutSlowIn, // 
+
+        autoPlay: true, // فعلتها عشان تتحرك
+        autoPlayInterval: const Duration(seconds: 3), // عدد الصور المتحركه
+        autoPlayCurve: Curves.fastOutSlowIn, //
       ),
       items: [
-       // 'assets/images/photo_2024-08-16_23-29-26.jpg',
-        'assets/images/photo_2024-08-21_18-28-20.jpg',
+        'assets/images/photo_2024-09-23_04-05-15.jpg',
+        // 'assets/images/photo_2024-08-21_18-28-20.jpg',
         'assets/images/photo_2024-08-21_01-08-14.jpg',
       ].map((i) {
         return Builder(

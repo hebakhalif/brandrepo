@@ -27,21 +27,15 @@ class _LayoutScreenState extends State<LayoutScreen> {
     setState(() {
       _selectedIndex = index;
     });
-  } 
-  
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {
-          // Navigator.push(context, MaterialPageRoute(builder:(context)
-          // {
-           // return ProfileScreen();
-          // }
-          // ));
-          },
+          onPressed: () {},
           icon: const Icon(
             Iconsax.search_normal_outline,
             color: Colors.black,
@@ -49,13 +43,9 @@ class _LayoutScreenState extends State<LayoutScreen> {
         ),
         title: const LogoWithLine(),
         centerTitle: true,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Iconsax.more_circle_outline,
-              color: Colors.black,
-            ),
+        actions: const [
+          Icon(
+            Iconsax.shopping_cart_outline,
           ),
         ],
       ),
@@ -103,7 +93,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
               ),
             ),
             CustomNavigationBarItem(
-              
               icon: const Icon(Icons.settings),
               title: Text(
                 "Settings",

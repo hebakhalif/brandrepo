@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'login_screen.dart';
+import '../authentication/screens/login_screen/login_screen.dart';
 import 'otp_screen.dart';
 
 class Createpassword extends StatelessWidget {
