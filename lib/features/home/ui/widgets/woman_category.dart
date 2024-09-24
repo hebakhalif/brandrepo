@@ -1,3 +1,4 @@
+import 'package:brandy_flutter1/config/themes/font_weight.dart';
 import 'package:brandy_flutter1/features/home/ui/screens/product_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../../core/helpers/spacing.dart';
@@ -58,21 +59,23 @@ class WomanCategory extends StatelessWidget {
   Widget _buildStoreSectionTitle() {
     return const Padding(
       padding: EdgeInsets.only(left: 10),
-      child: Text(
-        "تسوق حسب المتجر",
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+      child: Center(
+        child: Text(
+          "تسوق حسب المتجر",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeightHelper.regular,
+          ),
         ),
       ),
     );
   }
 
   Widget _buildCategoryWidgetRow() {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: const [
+        children: [
           CategoryWidget(
             width: 170,
             imagePath: "assets/images/photo_2024-08-21_23-30-45.jpg",
@@ -94,25 +97,24 @@ class WomanCategory extends StatelessWidget {
   }
 
   Widget _buildProductSectionTitle() {
-    return const Text(
-      "أحدث تشكيلة من cLow REClPE",
-      style: TextStyle(
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
+    return const Center(
+      child: Text(
+        "أحدث تشكيلة من cLow REClPE",
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeightHelper.regular,
+        ),
       ),
     );
   }
 
   Widget _buildProductList() {
-    return SizedBox(
-      height: 280,
-      child: ListView.builder(
-        physics: const BouncingScrollPhysics(),
-        shrinkWrap: true,
-        scrollDirection: Axis.horizontal,
-        itemCount: 5,
-        itemBuilder: (context, index) {
-          return GestureDetector(
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: List.generate(
+          5,
+          (index) => GestureDetector(
             onTap: () {},
             child: ProductCard(
               imageUrl: 'assets/images/photo_2024-09-13_13-43-03.jpg',
@@ -120,8 +122,8 @@ class WomanCategory extends StatelessWidget {
               price: 300.0 + index * 100,
               isFavorite: index % 2 == 0,
             ),
-          );
-        },
+          ),
+        ),
       ),
     );
   }

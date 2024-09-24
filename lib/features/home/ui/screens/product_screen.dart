@@ -1,31 +1,5 @@
 import 'package:flutter/material.dart';
-
-class ProductList extends StatelessWidget {
-  const ProductList({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        height: 300, // Set the height of the list
-        child: ListView.separated(
-          separatorBuilder: (context, index) => const SizedBox(width: 10),
-          scrollDirection: Axis.horizontal, // Enable horizontal scrolling
-          itemCount: 5, // Number of products
-          itemBuilder: (context, index) {
-            return ProductCard(
-              imageUrl: 'assets/images/photo_2024-09-13_13-43-03.jpg',
-              title: 'Product $index',
-              price: 300.0 + index * 100,
-              isFavorite: index % 2 == 0,
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
+import '../../../../config/colors/app_colors.dart';
 
 class ProductCard extends StatelessWidget {
   final String imageUrl;
@@ -44,7 +18,12 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 260,
+      width: 200,
+      margin: const EdgeInsets.only(
+        right: 10,
+        bottom: 10,
+      ),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -79,10 +58,10 @@ class ProductCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'BEST SELLER',
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: AppColors.kPrimaryColor,
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
@@ -105,7 +84,7 @@ class ProductCard extends StatelessWidget {
                       width: 45,
                       height: 45,
                       decoration: const BoxDecoration(
-                        color: Colors.blue,
+                        color: AppColors.kPrimaryColor,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomRight: Radius.circular(20),
@@ -115,12 +94,9 @@ class ProductCard extends StatelessWidget {
                     ),
                   ],
                 ),
-
               ],
-              
             ),
           ),
-         
         ],
       ),
     );
