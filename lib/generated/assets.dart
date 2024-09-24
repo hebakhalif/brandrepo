@@ -2,42 +2,75 @@
 class Assets {
   Assets._();
 
-  static const String imagesFreepikExport20240814223734BgJp = 'assets/images/freepik-export-20240814223734BgJp.png';
-  static const String imagesFreepikExport20240814231253GrB5 = 'assets/images/freepik-export-20240814231253GrB5.png';
-  static const String imagesFreepikExport20240814232614pVVn = 'assets/images/freepik-export-20240814232614pVVn.png';
-  static const String imagesFreepikExport20240814233149Lxc1 = 'assets/images/freepik-export-20240814233149Lxc1.png';
-  static const String imagesFreepikExport20240814233948omXw = 'assets/images/freepik-export-20240814233948omXw.png';
-  static const String imagesFreepikExport20240814234219bpck = 'assets/images/freepik-export-20240814234219bpck.png';
-  static const String imagesFreepikExport20240815152612MINe = 'assets/images/freepik-export-20240815152612MINe.png';
-  static const String imagesFreepikExport20240815202358Sbgk = 'assets/images/freepik-export-20240815202358Sbgk.png';
-  static const String imagesFreepikExport20240815223025fSal = 'assets/images/freepik-export-20240815223025fSal.png';
-  static const String imagesFreepikExport20240816190709UzMC = 'assets/images/freepik-export-20240816190709UzMC.png';
-  static const String imagesFreepikExport20240816193755Xpfc = 'assets/images/freepik-export-20240816193755Xpfc.png';
-  static const String imagesFreepikExport20240816203114STzA = 'assets/images/freepik-export-20240816203114STzA.png';
-  static const String imagesFreepikExport20240820194907T31q = 'assets/images/freepik-export-20240820194907T31q.png';
-  static const String imagesFreepikExport202408201955114b8K = 'assets/images/freepik-export-202408201955114b8K.jpeg';
-  static const String imagesFreepikExport20240820222229i2pE = 'assets/images/freepik-export-20240820222229i2pE.png';
-  static const String imagesFreepikExport20240820222529hogp = 'assets/images/freepik-export-20240820222529hogp.png';
-  static const String imagesFreepikExport20240903131247rye0 = 'assets/images/freepik-export-20240903131247rye0.png';
-  static const String imagesFreepikExport20240903222719HXpM = 'assets/images/freepik-export-20240903222719HXpM.png';
-  static const String imagesFreepikExport20240903222738yeCH = 'assets/images/freepik-export-20240903222738yeCH.png';
-  static const String imagesFreepikExport20240904194952jFEi = 'assets/images/freepik-export-20240904194952jFEi.png';
+  static const String imagesFreepikExport20240814223734BgJp =
+      'assets/images/freepik-export-20240814223734BgJp.png';
+  static const String imagesFreepikExport20240814231253GrB5 =
+      'assets/images/freepik-export-20240814231253GrB5.png';
+  static const String imagesFreepikExport20240814232614pVVn =
+      'assets/images/freepik-export-20240814232614pVVn.png';
+  static const String imagesFreepikExport20240814233149Lxc1 =
+      'assets/images/freepik-export-20240814233149Lxc1.png';
+  static const String imagesFreepikExport20240814233948omXw =
+      'assets/images/freepik-export-20240814233948omXw.png';
+  static const String imagesFreepikExport20240814234219bpck =
+      'assets/images/freepik-export-20240814234219bpck.png';
+  static const String imagesFreepikExport20240815152612MINe =
+      'assets/images/freepik-export-20240815152612MINe.png';
+  static const String imagesFreepikExport20240815202358Sbgk =
+      'assets/images/freepik-export-20240815202358Sbgk.png';
+  static const String imagesFreepikExport20240815223025fSal =
+      'assets/images/freepik-export-20240815223025fSal.png';
+  static const String imagesFreepikExport20240816190709UzMC =
+      'assets/images/freepik-export-20240816190709UzMC.png';
+  static const String imagesFreepikExport20240816193755Xpfc =
+      'assets/images/freepik-export-20240816193755Xpfc.png';
+  static const String imagesFreepikExport20240816203114STzA =
+      'assets/images/freepik-export-20240816203114STzA.png';
+  static const String imagesFreepikExport20240820194907T31q =
+      'assets/images/freepik-export-20240820194907T31q.png';
+  static const String imagesFreepikExport202408201955114b8K =
+      'assets/images/freepik-export-202408201955114b8K.jpeg';
+  static const String imagesFreepikExport20240820222229i2pE =
+      'assets/images/freepik-export-20240820222229i2pE.png';
+  static const String imagesFreepikExport20240820222529hogp =
+      'assets/images/freepik-export-20240820222529hogp.png';
+  static const String imagesFreepikExport20240903131247rye0 =
+      'assets/images/freepik-export-20240903131247rye0.png';
+  static const String imagesFreepikExport20240903222719HXpM =
+      'assets/images/freepik-export-20240903222719HXpM.png';
+  static const String imagesFreepikExport20240903222738yeCH =
+      'assets/images/freepik-export-20240903222738yeCH.png';
+  static const String imagesFreepikExport20240904194952jFEi =
+      'assets/images/freepik-export-20240904194952jFEi.png';
   static const String imagesPhoto202 = 'assets/images/photo_202.jpg';
-  static const String imagesPhoto20240816223354 = 'assets/images/photo_2024-08-16_22-33-54.jpg';
-  static const String imagesPhoto20240816225016 = 'assets/images/photo_2024-08-16_22-50-16.jpg';
-  static const String imagesPhoto20240816225603 = 'assets/images/photo_2024-08-16_22-56-03.jpg';
-  static const String imagesPhoto20240816232926 = 'assets/images/photo_2024-08-16_23-29-26.jpg';
-  static const String imagesPhoto20240820232907 = 'assets/images/photo_2024-08-20_23-29-07.jpg';
-  static const String imagesPhoto20240820235601 = 'assets/images/photo_2024-08-20_23-56-01.jpg';
-  static const String imagesPhoto20240821010814 = 'assets/images/photo_2024-08-21_01-08-14.jpg';
-  static const String imagesPhoto20240821182820 = 'assets/images/photo_2024-08-21_18-28-20.jpg';
-  static const String imagesPhoto20240821233038 = 'assets/images/photo_2024-08-21_23-30-38.jpg';
-  static const String imagesPhoto20240821233042 = 'assets/images/photo_2024-08-21_23-30-42.jpg';
-  static const String imagesPhoto20240821233045 = 'assets/images/photo_2024-08-21_23-30-45.jpg';
-  static const String imagesPhoto20240821234354 = 'assets/images/photo_2024-08-21_23-43-54.jpg';
-  static const String imagesPhoto20240821234735 = 'assets/images/photo_2024-08-21_23-47-35.jpg';
-  static const String imagesPhoto20240903191016 = 'assets/images/photo_2024-09-03_19-10-16.jpg';
-  static const String imagesPortraitYoungJapaneseWomanWithJacket = 'assets/images/portrait-young-japanese-woman-with-jacket.jpg';
-  //static const String imagesScreenshot 20240820 225903 = 'assets/images/Screenshot 2024-08-20 225903.png';
-
+  static const String imagesPhoto20240816223354 =
+      'assets/images/photo_2024-08-16_22-33-54.jpg';
+  static const String imagesPhoto20240816225016 =
+      'assets/images/photo_2024-08-16_22-50-16.jpg';
+  static const String imagesPhoto20240816225603 =
+      'assets/images/photo_2024-08-16_22-56-03.jpg';
+  static const String imagesPhoto20240816232926 =
+      'assets/images/photo_2024-08-16_23-29-26.jpg';
+  static const String imagesPhoto20240820232907 =
+      'assets/images/photo_2024-08-20_23-29-07.jpg';
+  static const String imagesPhoto20240820235601 =
+      'assets/images/photo_2024-08-20_23-56-01.jpg';
+  static const String imagesPhoto20240821010814 =
+      'assets/images/photo_2024-08-21_01-08-14.jpg';
+  static const String imagesPhoto20240821182820 =
+      'assets/images/photo_2024-08-21_18-28-20.jpg';
+  static const String imagesPhoto20240821233038 =
+      'assets/images/photo_2024-08-21_23-30-38.jpg';
+  static const String imagesPhoto20240821233042 =
+      'assets/images/photo_2024-08-21_23-30-42.jpg';
+  static const String imagesPhoto20240821233045 =
+      'assets/images/photo_2024-08-21_23-30-45.jpg';
+  static const String imagesPhoto20240821234354 =
+      'assets/images/photo_2024-08-21_23-43-54.jpg';
+  static const String imagesPhoto20240821234735 =
+      'assets/images/photo_2024-08-21_23-47-35.jpg';
+  static const String imagesPhoto20240903191016 =
+      'assets/images/photo_2024-09-03_19-10-16.jpg';
+  static const String imagesPortraitYoungJapaneseWomanWithJacket =
+      'assets/images/portrait-young-japanese-woman-with-jacket.jpg';
 }

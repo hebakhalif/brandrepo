@@ -1,3 +1,4 @@
+import 'package:brandy_flutter1/config/colors/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -10,7 +11,7 @@ class LogoWithLine extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Container(
-          color: const Color.fromARGB(255, 194, 17, 208),
+          color: AppColors.kPrimaryColor,
           height: 2.0,
           width: 100.0,
         ),
