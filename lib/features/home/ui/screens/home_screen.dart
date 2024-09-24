@@ -3,8 +3,6 @@ import 'package:brandy_flutter1/core/helpers/spacing.dart';
 import 'package:brandy_flutter1/features/home/ui/widgets/woman_category.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../config/colors/app_colors.dart';
-import '../../../../core/components/custom_divider.dart';
 import '../widgets/slider_products.dart';
 import 'profile_screen.dart';
 
@@ -41,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 
   Widget _buildCategorySelector() {
     return SizedBox(
@@ -85,3 +84,5 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
