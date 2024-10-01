@@ -1,6 +1,11 @@
 import 'package:brandy_flutter1/config/themes/font_weight.dart';
 import 'package:brandy_flutter1/core/helpers/spacing.dart';
+import 'package:brandy_flutter1/features/home/ui/screens/product_details.dart';
+import 'package:brandy_flutter1/features/home/ui/widgets/child_catergory.dart';
+import 'package:brandy_flutter1/features/home/ui/widgets/man_category.dart';
+import 'package:brandy_flutter1/features/home/ui/widgets/shoes_category.dart';
 import 'package:brandy_flutter1/features/home/ui/widgets/woman_category.dart';
+import 'package:brandy_flutter1/views/OffersScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../config/colors/app_colors.dart';
@@ -16,14 +21,20 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final List<String> categories = [
-    'العروض',
     'النساء',
     'الرجال',
     'الأطفال',
     'الأحذية',
   ];
-
+  
   int _currentCategoryIndex = 0;
+
+  List <Widget> _categoryWidget=[
+ WomanCategory(),
+ ManCategory(),
+  ChildCategory(),
+  ShoesCategory(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -34,18 +45,20 @@ class _HomeScreenState extends State<HomeScreen> {
           _buildCategorySelector(),
           Spacing.verticalSpace(20),
           Expanded(
-            child: WomanCategory(),
+            child: _categoryWidget[_currentCategoryIndex] ,
           ),
+        
         ],
       ),
     );
   }
+  
 
-  Widget _buildCategorySelector() {
+  Widget _buildCategorySelector() { //خاصه بالاقسام الرجال النساء وهكذا
     return SizedBox(
-      height: 35,
+      height: 37,
       child: ListView.separated(
-        separatorBuilder: (context, index) => Spacing.horizontalSpace(15),
+        separatorBuilder: (context, index) => Spacing.horizontalSpace(27),
         scrollDirection: Axis.horizontal,
         itemCount: categories.length,
         itemBuilder: (context, index) {
@@ -60,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                 border: Border.all(
-                  width: .5,
+                  width: .8,
                   color: _currentCategoryIndex == index
                       ? AppColors.kPrimaryColor
                       : AppColors.kGrayColor,
@@ -74,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ? AppColors.kPrimaryColor
                       : AppColors.kGrayColor,
                   fontWeight: FontWeightHelper.light,
-                  fontSize: 15,
+                  fontSize: 17,
                 ),
               ),
             ),
@@ -84,3 +97,12 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+
+
+
+
+
+
+
+

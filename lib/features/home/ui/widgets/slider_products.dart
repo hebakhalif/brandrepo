@@ -9,14 +9,14 @@ import '../../../../config/colors/app_colors.dart';
 class SliderProducts extends StatelessWidget {
   const SliderProducts({
     super.key,
+    required this.images,
   });
-
+final List <String> images;
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
         height: 140, //كانت 250
-
         autoPlay: true, // فعلتها عشان تتحرك
         autoPlayInterval: const Duration(seconds: 3), // عدد الصور المتحركه
         autoPlayCurve: Curves.fastOutSlowIn, //

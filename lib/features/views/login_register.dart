@@ -10,13 +10,13 @@ class LoginRegister extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<CardModel> cards = [
       CardModel(
-        image: "assets/images/freepik-export-202409222314092mFG.png",
-        title: "Jacket",
+        image: "assets/images/freepik-export-20240923005000rTLm.png",
+        title: "Brands bag",
         text: "12 items",
       ),
       CardModel(
-        image: "assets/images/freepik-export-20240923005000rTLm.png",
-        title: "Brands bag",
+        image: "assets/images/freepik-export-202409222314092mFG.png",
+        title: "Jacket",
         text: "9 items",
       ),
       CardModel(
@@ -59,7 +59,7 @@ class BrandHeader extends StatelessWidget {
           style: TextStyle(
             fontSize: 50,
             fontWeight: FontWeight.bold,
-            color: Colors.orange,
+            color: Color.fromARGB(255, 43, 42, 40),
           ),
         ),
         Text(
@@ -75,15 +75,14 @@ class BrandHeader extends StatelessWidget {
 
 class ProductCardList extends StatelessWidget {
   final List<CardModel> cards;
-
   const ProductCardList({required this.cards, super.key});
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 310,
       child: ListView.separated(
-        physics: const BouncingScrollPhysics(),
+       //physics: const BouncingScrollPhysics(),
+        physics:const NeverScrollableScrollPhysics(),
         separatorBuilder: (context, index) => const SizedBox(width: 40),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => Padding(

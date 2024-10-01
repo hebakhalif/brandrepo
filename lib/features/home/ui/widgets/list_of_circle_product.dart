@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 import '../../../../views/Productsscroll.dart';
@@ -20,10 +21,12 @@ class ListOfCircleProduct extends StatelessWidget {
         itemBuilder: (context, index) {
           return ProductScrollItem(
             image: products[index].image,
-            text: products[index].text,
+          //  text: products[index].image,
           );
         },
       ),
     );
   }
 }
+
+

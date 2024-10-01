@@ -104,23 +104,23 @@ class Home1 extends StatelessWidget {
               children: [
                 ProductScrollItem(
                   image: "assets/images/freepik-export-20240814234219bpck.png",
-                  text: "أحذية",
+                 // text: "أحذية",
                 ),
                 ProductScrollItem(
                   image: "assets/images/freepik-export-20240814233149Lxc1.png",
-                  text: "حقائب نسائية",
+                 // text: "حقائب نسائية",
                 ),
                 ProductScrollItem(
                   image: "assets/images/freepik-export-20240814231253GrB5.png",
-                  text: "ملابس نسائيه",
+                 // text: "ملابس نسائيه",
                 ),
                 ProductScrollItem(
                   image: "assets/images/freepik-export-20240814223734BgJp.png",
-                  text: "مجموعة الصيف",
+                 // text: "مجموعة الصيف",
                 ),
                 ProductScrollItem(
                   image: "assets/images/freepik-export-20240815152612MINe.png",
-                  text: "اكسسوارات",
+                 // text: "اكسسوارات",
                 ),
                 // Productsscroll(Imaget: "assets/images/freepik-export-20240814223734BgJp.png", textuu: "hhhhhhh",),
               ],

@@ -1,7 +1,9 @@
 import 'package:brandy_flutter1/config/colors/app_colors.dart';
 import 'package:brandy_flutter1/features/home/ui/screens/home_screen.dart';
+import 'package:brandy_flutter1/features/layout/ui/screens/Profile_screen.dart';
+import 'package:brandy_flutter1/features/layout/ui/screens/favourites.dart';
 import 'package:brandy_flutter1/features/layout/ui/widgets/logo_with_line.dart';
-//import 'package:brandy_flutter1/views/ProfileScreen.dart';
+import 'package:brandy_flutter1/features/layout/ui/screens/CartScreen.dart';
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -16,11 +18,11 @@ class LayoutScreen extends StatefulWidget {
 class _LayoutScreenState extends State<LayoutScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _screens = const [
-    HomeScreen(),
-    Center(child: Text("Search")),
-    Center(child: Text("Profile")),
-    Center(child: Text("Settings")),
+  final List<Widget> _screens = [
+     HomeScreen(),
+     Favourites(),
+     CartScreen(),
+     ProfileScreens(),
   ];
 
   void _onTap(int index) {
@@ -30,22 +32,19 @@ class _LayoutScreenState extends State<LayoutScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(
-            Iconsax.search_normal_outline,
-            color: Colors.black,
-          ),
-        ),
+        automaticallyImplyLeading: false,
         title: const LogoWithLine(),
         centerTitle: true,
         actions: const [
-          Icon(
-            Iconsax.shopping_cart_outline,
+          Padding(
+            padding: EdgeInsets.all(12.0),
+            child: Icon(
+              Iconsax.search_normal_outline,
+            ),
           ),
         ],
       ),
@@ -71,11 +70,22 @@ class _LayoutScreenState extends State<LayoutScreen> {
               ),
             ),
             CustomNavigationBarItem(
-              icon: const Icon(Iconsax.search_normal_outline),
+              icon: const Icon(Iconsax.heart_add_outline),
               title: Text(
-                "Search",
+                "favorite",
                 style: TextStyle(
                   color: _selectedIndex == 1
+                      ? AppColors.kPrimaryColor
+                      : AppColors.kGreyColor,
+                ),
+              ),
+            ),
+            CustomNavigationBarItem(
+              icon: const Icon(Icons.shopping_cart_outlined),
+              title: Text(
+                "Cart",
+                style: TextStyle(
+                  color: _selectedIndex == 2
                       ? AppColors.kPrimaryColor
                       : AppColors.kGreyColor,
                 ),
@@ -85,17 +95,6 @@ class _LayoutScreenState extends State<LayoutScreen> {
               icon: const Icon(Iconsax.profile_circle_outline),
               title: Text(
                 "Profile",
-                style: TextStyle(
-                  color: _selectedIndex == 2
-                      ? AppColors.kPrimaryColor
-                      : AppColors.kGreyColor,
-                ),
-              ),
-            ),
-            CustomNavigationBarItem(
-              icon: const Icon(Icons.settings),
-              title: Text(
-                "Settings",
                 style: TextStyle(
                   color: _selectedIndex == 3
                       ? AppColors.kPrimaryColor
